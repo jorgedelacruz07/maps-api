@@ -3,8 +3,10 @@ const District = require('./District')
 var Koa = require('koa')
 var bodyParser = require('koa-bodyparser')
 var Router = require('koa-router')
+const cors = require('@koa/cors')
 
 var app = new Koa()
+app.use(cors())
 app.use(bodyParser())
 
 var router = new Router()
@@ -37,9 +39,7 @@ mongoose.connect('mongodb://localhost/mapsdb')
 var db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', async () => {
-  const ubi = await District.findOne({ 'properties.c_ubigeo': '101010' })
-  console.log(ubi)
-  app.listen(3000, () => {
-    console.log('La app está en el puerto 3000')
+  app.listen(process.env.PORT, () => {
+    console.log('La app está en el puerto 5000')
   })
 })
