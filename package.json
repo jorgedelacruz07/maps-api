@@ -1,0 +1,20 @@
+{
+  "name": "maps-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development PORT=3000 nodemon index.js",
+    "start": "NODE_ENV=production PORT=3000 node index.js",
+    "test": "standard --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.1.2"
+  }
+}
