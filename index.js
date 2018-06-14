@@ -40,6 +40,6 @@ var db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))
 db.once('open', async () => {
   app.listen(process.env.PORT, () => {
-    console.log('La app está en el puerto 5000')
+    console.log('La app está en el puerto 3000')
   })
 })
