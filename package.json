@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development PORT=3000 nodemon index.js",
-    "start": "NODE_ENV=production PORT=3000 node index.js",
+    "dev": "NODE_ENV=development PORT=3001 nodemon index.js",
+    "start": "NODE_ENV=production PORT=3001 node index.js",
     "test": "standard --fix"
   },
   "keywords": [],
